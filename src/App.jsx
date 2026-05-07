@@ -3,7 +3,10 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
-
+// import { PrimeReactProvider, PrimeReactContext } from 'primereact/api'
+import { Button } from 'primereact/button';
+import 'primeicons/primeicons.css';
+        
 function App() {
   const [count, setCount] = useState(0)
 
@@ -21,13 +24,23 @@ function App() {
             Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
           </p>
         </div>
-        <button
+        {/* <button
           type="button"
           className="counter"
           onClick={() => setCount((count) => count + 1)}
         >
           Count is {count}
-        </button>
+        </button> */}
+
+        <Button
+          type="button"
+          className="counter"
+          onClick={() => setCount((count) => count + 1)}
+          label="Check" 
+          icon="pi pi-check"
+        />
+          Count is {count}
+        
       </section>
 
       <div className="ticks"></div>
