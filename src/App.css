@@ -17,6 +17,31 @@
   }
 }
 
+.p-menubar {
+    display: flex;
+    justify-content: center;
+    background-color: #101720 !important;
+    border: none !important;
+}
+
+.p-menuitem-text {
+    color: white !important;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-weight: bold; */
+}
+
+.p-menubar-root-list {
+    position: absolute;
+    
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 1rem;
+}
+
+
 .hero {
   position: relative;
 
