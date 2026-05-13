@@ -1,0 +1,294 @@
+.hero-section {
+
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    background-image: url('../../assets/themeImage.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 6rem;
+
+    animation: heroImageReveal 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+
+}
+
+.hero-overlay {
+
+    position: absolute;
+    inset: 0;
+
+    /* background: rgba(0, 0, 0, 0.55); */
+
+}
+
+.hero-content {
+
+    position: relative;
+    z-index: 2;
+
+    max-width: 650px;
+
+    color: white;
+
+}
+
+.hero-content h1 {
+
+    font-size: 4rem;
+
+    line-height: 1.1;
+
+    margin-bottom: 1.5rem;
+
+    color: white;
+
+}
+
+.hero-content p {
+
+    font-size: 1.3rem;
+
+    margin-bottom: 2rem;
+
+    color: #d1d5db;
+
+}
+
+.hero-button {
+
+    background-color: white !important;
+
+    color: #111827 !important;
+
+    border: none !important;
+
+    padding: 1rem 2rem !important;
+
+}
+
+/* VEÍCULOS */
+
+.vehicles-section {
+
+    padding: 6rem 4rem;
+
+    background-color: white;
+
+}
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 4rem;
+
+}
+
+.section-title h2 {
+
+    font-size: 2.5rem;
+
+    color: #111827;
+
+}
+
+.vehicle-card {
+
+    width: 320px;
+
+    overflow: hidden;
+
+    border-radius: 20px !important;
+
+}
+
+.vehicle-card img {
+
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+
+}
+
+.vehicle-card h3 {
+
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+
+    color: #111827;
+
+}
+
+.vehicle-card p {
+
+    color: #6b7280;
+
+}
+
+/* PARCEIROS */
+
+.partners-section {
+
+    padding: 5rem 4rem;
+
+    background-color: #f3f4f6;
+
+    text-align: center;
+
+}
+
+.partners-section h2 {
+
+    margin-bottom: 4rem;
+
+    font-size: 2.5rem;
+
+    color: #111827;
+
+}
+
+.partner-logo {
+
+    width: 180px;
+    height: 100px;
+
+    background-color: white;
+
+    border-radius: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+
+}
+
+/* FOOTER */
+
+.footer {
+
+    background-color: #111827;
+
+    color: white;
+
+    padding: 4rem;
+
+}
+
+.footer h3,
+.footer h4 {
+
+    margin-bottom: 1rem;
+
+}
+
+.footer p {
+
+    color: #9ca3af;
+
+    margin-bottom: .5rem;
+
+}
+
+/* RESPONSIVO */
+
+@media screen and (max-width: 768px) {
+
+    .hero-section {
+
+        padding: 0 2rem;
+
+    }
+
+    .hero-content h1 {
+
+        font-size: 2.5rem;
+
+    }
+
+    .hero-content p {
+
+        font-size: 1rem;
+
+    }
+
+    .vehicles-section,
+    .partners-section,
+    .footer {
+
+        padding: 4rem 1.5rem;
+
+    }
+
+    .vehicle-card {
+
+        width: 100%;
+
+    }
+
+}
+
+/* ANIMAÇÃO HERO */
+
+.hero-content {
+
+    animation: heroDrop 1.2s ease forwards;
+
+    animation-delay: 0.3s;
+
+    opacity: 0;
+}
+
+@keyframes heroDrop {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(-120px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ANIMAÇÃO DA IMAGEM */
+
+@keyframes heroImageReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(1.08);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
