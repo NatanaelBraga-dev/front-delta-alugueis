@@ -1,18 +1,29 @@
 import Header from './components/Header/Header';
-import Body from './components/Body/Body';
+import HeroSection from './components/hero_section/HeroSection';
+import VehiclesSection from './components/vehicles_section/VehiclesSection';
+import PartnersSection from './components/partners_section/PartnersSection';
+import Footer from './components/footer/Footer';
 
 import './App.css';
 
 function App() {
 
     return (
+
         <div className="app-container">
 
             <Header />
 
-            <Body />
+            <HeroSection />
+
+            <VehiclesSection />
+
+            <PartnersSection />
+
+            <Footer />
 
         </div>
+
     );
 }
 
