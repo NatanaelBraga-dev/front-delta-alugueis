@@ -14,20 +14,36 @@ function Body() {
 
                 <div className="hero-overlay"></div>
 
-                <div className="hero-content flex flex-column justify-content-center align-items-start">
+                <div className="hero-content flex flex-column justify-content-center align-items-center">
 
-                    <h1>
-                        Encontre o veículo perfeito para sua viagem
+                    <h1 className='hero-title'>
+                        SEU DESTINO <span>COMEÇA</span> AQUI
                     </h1>
 
-                    <p>
-                        Conforto, segurança e os melhores preços para você.
-                    </p>
+                    <form className="hero-form">
+
+                        <input
+                            type="text"
+                            placeholder="Cidade de retirada"
+                        />
+
+                        <input
+                            type="date"
+                            placeholder="Data"
+                        />
+
+                        <input
+                            type="text"
+                            placeholder="Modelo do veículo"
+                        />
+
+                    </form>
 
                     <Button
-                        label="Ver Catálogo"
+                        label="VER OPÇÕES"
                         icon="pi pi-car"
                         className="hero-button"
+                        
                     />
 
                 </div>

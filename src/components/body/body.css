@@ -11,9 +11,11 @@
     background-position: center;
 
     display: flex;
+
+    justify-content: center;
     align-items: center;
 
-    padding: 0 6rem;
+    padding: 0 2rem;
 
     animation: heroImageReveal 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 
@@ -28,20 +30,102 @@
 
 }
 
-.hero-content {
+.hero-title {
 
-    position: relative;
-    z-index: 2;
+    font-size: 3rem;
 
-    max-width: 650px;
+    line-height: 1.1;
+
+    margin-bottom: 2rem;
 
     color: white;
 
+    text-align: center;
+
+}
+
+.hero-title span {
+
+    color: #EF1919;
+
+}
+
+.hero-form {
+
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 2rem;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    backdrop-filter: blur(8px);
+
+    
+}
+
+.hero-form input {
+
+    width: 250px;
+
+    padding: 1rem 1.2rem;
+
+    border: none;
+
+    outline: none;
+
+    background: rgba(217, 217, 217, 0.25);
+
+    color: white;
+
+    font-size: 1rem;
+
+}
+
+.hero-form input::placeholder {
+
+    color: rgba(255, 255, 255, 0.8);
+
+}
+
+.hero-form input:not(:last-child) {
+
+    border-right: 1px solid rgba(206, 206, 206, 0.25);
+    border-radius: 5px;
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    bottom: 180px;
 }
 
 .hero-content h1 {
 
-    font-size: 4rem;
+    font-size: 3rem;
 
     line-height: 1.1;
 
@@ -63,14 +147,27 @@
 
 .hero-button {
 
-    background-color: white !important;
+    font-size: 17px;
+
+    font-weight: bold;
+
+    border-radius: 10px;
+
+    background-color: rgba(255, 255, 255, 0.692) !important;
 
     color: #111827 !important;
 
-    border: none !important;
+    border: 1px solid #111827;
 
     padding: 1rem 2rem !important;
 
+    transition: 0.5s ease-out ;
+}
+
+.hero-button:hover{
+    background-color: #111827 !important;
+    border: 1px solid white;
+    color: white !important;
 }
 
 /* VEÍCULOS */
@@ -235,6 +332,28 @@
     .vehicle-card {
 
         width: 100%;
+
+    }
+
+    .hero-form {
+
+    flex-direction: column;
+
+    width: 100%;
+
+    }
+
+    .hero-form input {
+
+        width: 100%;
+
+    }
+
+    .hero-form input:not(:last-child) {
+
+        border-right: none;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 
     }
 
