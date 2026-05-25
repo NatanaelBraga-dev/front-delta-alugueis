@@ -1,4 +1,5 @@
 import { Card } from 'primereact/card';
+import { Button } from 'primereact/button';
 
 import './VehiclesSection.css';
 
@@ -9,12 +10,10 @@ function VehiclesSection() {
         <section className="vehicles-section">
 
             <div className="section-title">
-
                 <h2>Veículos mais alugados</h2>
-
             </div>
 
-            <div className="flex flex-wrap justify-content-center gap-4">
+            <div className="vehicles-container">
 
                 <Card className="vehicle-card">
 
@@ -23,9 +22,20 @@ function VehiclesSection() {
                         alt="HB20"
                     />
 
-                    <h3>HB20</h3>
+                    <div className="vehicle-info">
+                        <div className='vehicle-info-specs'>
 
-                    <p>Econômico e confortável</p>
+                            <h3>Corolla</h3>
+                            <p className='paragraph-prec'>R$ 340,00</p>
+
+                        </div>
+
+                        <Button
+                            label="Alugar agora"
+                            icon="pi pi-car"
+                            className="vehicle-button"
+                        />
+                    </div>
 
                 </Card>
 
@@ -36,9 +46,44 @@ function VehiclesSection() {
                         alt="Corolla"
                     />
 
-                    <h3>Corolla</h3>
+                    <div className="vehicle-info">
+                        <div className='vehicle-info-specs'>
 
-                    <p>Elegância e desempenho</p>
+                            <h3>Corolla</h3>
+                            <p className='paragraph-prec'>R$ 340,00</p>
+
+                        </div>
+                        
+                        <Button
+                            label="Alugar agora"
+                            icon="pi pi-car"
+                            className="vehicle-button"
+                        />
+                    </div>
+
+                </Card>
+
+                <Card className="vehicle-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1503376780353-7e6692767b70"
+                        alt="Corolla"
+                    />
+
+                    <div className="vehicle-info">
+                        <div className='vehicle-info-specs'>
+
+                            <h3>Corolla</h3>
+                            <p className='paragraph-prec'>R$ 340,00</p>
+
+                        </div>
+
+                        <Button
+                            label="Alugar agora"
+                            icon="pi pi-car"
+                            className="vehicle-button"
+                        />
+                    </div>
 
                 </Card>
 

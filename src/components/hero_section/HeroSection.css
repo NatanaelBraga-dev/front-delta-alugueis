@@ -36,8 +36,9 @@
 }
 
 .hero-title {
-    font-size: 3rem;
+    font-size: 3.5rem;
     line-height: 1.1;
+    letter-spacing: 5px;
     margin-bottom: 2rem;
     color: white;
     text-align: center;
@@ -78,7 +79,7 @@
     font-size: 17px;
     font-weight: bold;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.692) !important;
+    background-color: rgba(255, 255, 255, 0.548) !important;
     color: #111827 !important;
     border: 1px solid #111827;
     padding: 1rem 2rem !important;

@@ -32,10 +32,10 @@ function Header() {
     }, []);
 
     const items = [
-        { label: 'Home' },
-        { label: 'Nosso Catálogo' },
-        { label: 'Sobre' },
-        { label: 'Contatos' }
+        { label: 'HOME' },
+        { label: 'NOSSO CATÁLOGO' },
+        { label: 'SOBRE' },
+        { label: 'CONTATOS' }
     ];
 
     const start = (
