@@ -19,6 +19,7 @@ function HeroSection() {
                 <form className="hero-form">
 
                     <input
+                        maxLength={40}
                         type="text"
                         placeholder="Cidade de retirada"
                     />
