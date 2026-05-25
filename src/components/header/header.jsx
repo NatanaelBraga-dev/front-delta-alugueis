@@ -5,7 +5,7 @@ import { Avatar } from 'primereact/avatar';
 
 import Deltalogotipo2 from '../../assets/Deltalogotipo2.png';
 
-import './Header.css';
+import './header.css';
 
 function Header() {
 
