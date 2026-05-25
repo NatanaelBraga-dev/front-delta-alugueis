@@ -1,24 +1,97 @@
 .partners-section {
-    padding: 5rem 4rem;
-    background-color: #f3f4f6;
+    padding: 6rem 0;
+    background-color: #0F1620;
+    overflow: hidden;
     text-align: center;
 }
 
 .partners-section h2 {
     margin-bottom: 4rem;
     font-size: 2.5rem;
-    color: #111827;
+    color: #FFFFFF;
 }
 
-.partner-logo {
-    width: 180px;
-    height: 100px;
-    background-color: white;
-    border-radius: 16px;
+/* CONTAINER */
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* TRACK */
+
+.carousel-track {
+
     display: flex;
+    align-items: center;
+
+    gap: 2rem;
+
+    width: max-content;
+
+    white-space: nowrap;
+
+    animation: infiniteCarousel 20s linear infinite;
+}
+
+/* CARD */
+
+.partner-card {
+
+    width: 220px;
+    height: 180px;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
-    font-weight: bold;
+
+    gap: 1rem;
+
+    padding: 1.5rem;
+
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+
+    transition: transform 0.3s ease;
+
+    flex-shrink: 0;
+}
+
+.partner-card:hover {
+    transform: translateY(-8px);
+}
+
+/* LOGO */
+
+.partner-card img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+/* TEXTO */
+
+.partner-card h3 {
+    font-size: 1.2rem;
+    color: #111827;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* ANIMAÇÃO */
+
+@keyframes infiniteCarousel {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-50% - 1rem));
+    }
 }

@@ -1,7 +1,8 @@
 .footer {
-    background-color: #111827;
+    background-color: #0F1620;
     color: white;
     padding: 4rem;
+    border-top: 1px solid white;
 }
 
 .footer h3,
