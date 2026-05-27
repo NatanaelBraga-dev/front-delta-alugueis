@@ -1,7 +1,7 @@
 .hero-section {
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url('../../assets/themeImage.jpg');
     background-size: cover;
     background-position: center;
@@ -9,6 +9,8 @@
     justify-content: center;
     align-items: center;
     padding: 0 2rem;
+    overflow: hidden;
+    padding-bottom: 290px;
     animation: heroImageReveal 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
@@ -20,15 +22,20 @@
 .hero-content {
     position: relative;
     z-index: 2;
+
     width: 100%;
-    max-width: 1000px;
+    max-width: 1100px;
+
     color: white;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     text-align: center;
-    bottom: 180px;
+
+    padding: 0 1rem;
 
     animation: heroDrop 1.2s ease forwards;
     animation-delay: 0.3s;
@@ -36,12 +43,16 @@
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: clamp(2.3rem, 5vw, 3.5rem);
     line-height: 1.1;
-    letter-spacing: 5px;
-    margin-bottom: 2rem;
+    letter-spacing: 3px;
+
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+
     color: white;
     text-align: center;
+
+    max-width: 1000px;
 }
 
 .hero-title span {
@@ -49,22 +60,34 @@
 }
 
 .hero-form {
+    width: 100%;
+    max-width: 700px;
+
     display: flex;
+    justify-content: center;
     align-items: center;
+
     margin-bottom: 2rem;
+
     border-radius: 12px;
     overflow: hidden;
+
     backdrop-filter: blur(9px);
 }
 
 .hero-form input {
-    width: 210px;
-    padding: 1rem 1.2rem;
+    flex: 1;
+    min-width: 180px;
+
+    padding: clamp(0.8rem, 1.5vw, 1rem);
+
     border: none;
     outline: none;
-    background: #d9d9d96e;
+
+    background: #d9d9d98a;
     color: white;
-    font-size: 1rem;
+
+    font-size: clamp(0.9rem, 1vw, 1rem);
 }
 
 .hero-form input::placeholder {
@@ -72,17 +95,20 @@
 }
 
 .hero-form input:not(:last-child) {
-    border-right: 1px solid rgba(206, 206, 206, 0.473) !important;  
+    border-right: 1px solid rgba(206, 206, 206, 0.473) !important;
 }
 
 .hero-button {
-    font-size: 17px;
-    font-weight: bold;
+    font-size: clamp(0.95rem, 1vw, 1.05rem);
+
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.651) !important;
+    background-color: rgba(255, 255, 255, 0.849) !important;
     color: #111827 !important;
-    border: 1px solid #111827;
+
+    border: none;
+
     padding: 0.8rem 1.5rem !important;
+
     transition: 0.5s ease-out;
 }
 
@@ -91,6 +117,30 @@
     border: 1px solid white;
     color: white !important;
 }
+
+/* notebooks menores */
+@media (max-width: 1300px) {
+    .hero-content {
+        transform: translateY(-40px);
+    }
+
+    .hero-form {
+        max-width: 550px;
+    }
+
+    .hero-form input {
+        min-width: 160px;
+    }
+
+    .hero-title{
+        font-size: clamp(2.3rem, 4vw, 3.5rem);
+        line-height: 1.1;
+        letter-spacing: 2.5px;
+    }
+
+}
+
+
 
 @keyframes heroDrop {
     from {
